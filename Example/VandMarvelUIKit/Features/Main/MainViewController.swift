@@ -16,4 +16,9 @@ class MainViewController: UIViewController {
         view = mainView
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+
 }
