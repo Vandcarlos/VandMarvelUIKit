@@ -71,6 +71,16 @@
                ReferencedContainer = "container:VandMarvelUIKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A031276225B8F5D80080CAAA"
+               BuildableName = "VandMarvelUIKit_ExampleTests.xctest"
+               BlueprintName = "VandMarvelUIKit_ExampleTests"
+               ReferencedContainer = "container:VandMarvelUIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
