@@ -10,15 +10,22 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private let mainView = MainView()
+    private lazy var mainView: MainView = {
+        let view = MainView()
+        view.delegate = self
+        return view
+    }()
 
     override func loadView() {
         view = mainView
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+}
+
+extension MainViewController: MainViewDelegate {
+
+    func mainView(_ mainView: MainView, didSelectOption option: MainView.Option) {
+        navigationController?.pushViewController(option.viewController(), animated: true)
     }
 
 }

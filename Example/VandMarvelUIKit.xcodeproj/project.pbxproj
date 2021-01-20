@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A0158C2825B8C21A00641FC1 /* FavoriteButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0158C2725B8C21A00641FC1 /* FavoriteButtonViewController.swift */; };
+		A031275C25B8F4D90080CAAA /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031275B25B8F4D90080CAAA /* FavoriteButtonView.swift */; };
 		A0BDAA8725B7B66300A711AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDAA8625B7B66300A711AB /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		66DB5FFF94DF2127A74856F0 /* VandMarvelUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VandMarvelUIKit.podspec; path = ../VandMarvelUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7665D63C02BA88DD01A65D4D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9C61E6A643C0D361899137DB /* Pods-VandMarvelUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VandMarvelUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-VandMarvelUIKit_Example/Pods-VandMarvelUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A0158C2725B8C21A00641FC1 /* FavoriteButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonViewController.swift; sourceTree = "<group>"; };
+		A031275B25B8F4D90080CAAA /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
 		A0BDAA8625B7B66300A711AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C34C11CC04D0ECED676E6C57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E12F5EF9295BC4F2B66D9B27 /* Pods_VandMarvelUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VandMarvelUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +97,7 @@
 		607FACD21AFB9204008FA782 /* Example for VandMarvelUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A0BDAA8325B7B63F00A711AB /* Main */,
+				A0158C2525B8C20300641FC1 /* Features */,
 				A0BDAA7E25B7B62A00A711AB /* Supporting Files */,
 			);
 			name = "Example for VandMarvelUIKit";
@@ -125,6 +129,24 @@
 				C34C11CC04D0ECED676E6C57 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		A0158C2525B8C20300641FC1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A0158C2625B8C20B00641FC1 /* FavoriteButton */,
+				A0BDAA8325B7B63F00A711AB /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A0158C2625B8C20B00641FC1 /* FavoriteButton */ = {
+			isa = PBXGroup;
+			children = (
+				A0158C2725B8C21A00641FC1 /* FavoriteButtonViewController.swift */,
+				A031275B25B8F4D90080CAAA /* FavoriteButtonView.swift */,
+			);
+			path = FavoriteButton;
 			sourceTree = "<group>";
 		};
 		A0BDAA7E25B7B62A00A711AB /* Supporting Files */ = {
@@ -215,7 +237,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Vand;
 				TargetAttributes = {
@@ -359,8 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0158C2825B8C21A00641FC1 /* FavoriteButtonViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				A0BDAA8725B7B66300A711AB /* MainView.swift in Sources */,
+				A031275C25B8F4D90080CAAA /* FavoriteButtonView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

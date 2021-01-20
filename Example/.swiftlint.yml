@@ -43,4 +43,7 @@ identifier_name:
   excluded: # excluded via string array
     - id
     - GlobalAPIKey
+    - sm
+    - md
+    - xl
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)

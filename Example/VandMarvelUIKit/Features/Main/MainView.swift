@@ -9,6 +9,12 @@
 import VandMarvelUIKit
 import SnapKit
 
+protocol MainViewDelegate: AnyObject {
+
+    func mainView(_ mainView: MainView, didSelectOption option: MainView.Option)
+
+}
+
 class MainView: UIView, VMViewCode {
 
     init() {
@@ -20,14 +26,17 @@ class MainView: UIView, VMViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public var options: [Option] = [
-        
+    weak var delegate: MainViewDelegate?
+
+    var options: [Option] = [
+        .init(title: "Favorite button", viewController: { FavoriteButtonViewController() })
     ]
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(OptionCell.self)
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
 
@@ -37,11 +46,13 @@ class MainView: UIView, VMViewCode {
 
     func setupConstraints() {
         tableView.snp.makeConstraints { maker in
-            maker.edges.equalTo(self.safeAreaInsets)
+            maker.edges.equalTo(self)
         }
     }
 
-    func configViews() {}
+    func configViews() {
+        backgroundColor = .white
+    }
 
 }
 
@@ -59,12 +70,20 @@ extension MainView: UITableViewDataSource {
 
 }
 
+extension MainView: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.mainView(self, didSelectOption: options[indexPath.row])
+    }
+
+}
+
 extension MainView {
 
     struct Option {
 
         let title: String
-        let viewController: UIViewController
+        let viewController: () -> UIViewController
 
     }
 
@@ -97,7 +116,7 @@ extension MainView {
         }
 
         func configViews() {
-
+            titleLabel.font = VMFont.body(size: .md).font
         }
 
     }
