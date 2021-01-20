@@ -6,8 +6,8 @@ public enum VMImage: String {
 
     case heart
 
-    public var image: UIImage {
-        UIImage(named: rawValue, in: Bundle(for: VandMarvelUIKit.self), compatibleWith: nil) ?? UIImage()
+    public var image: UIImage? {
+        UIImage(named: rawValue, in: Bundle(for: VandMarvelUIKit.self), compatibleWith: nil)
     }
 
 }

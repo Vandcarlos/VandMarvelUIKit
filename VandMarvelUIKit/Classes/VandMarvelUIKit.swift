@@ -7,5 +7,6 @@ public final class VandMarvelUIKit {
     public static let shared = VandMarvelUIKit()
 
     public var colorLoader: VMColorLoader = VMColorLoaderDefault()
+    public var fontLoader: VMFontLoader = VMFontLoaderDefault()
 
 }

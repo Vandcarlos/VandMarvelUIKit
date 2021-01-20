@@ -26,24 +26,20 @@ public enum VMColor: String {
 
     case background
 
-    var color: UIColor { VandMarvelUIKit.shared.colorLoader.loadColor(named: rawValue) }
+    var color: UIColor? { VandMarvelUIKit.shared.colorLoader.loadColor(named: rawValue) }
 
 }
 
 public protocol VMColorLoader {
 
-    func loadColor(named: String) -> UIColor
+    func loadColor(named: String) -> UIColor?
 
 }
 
-public class VMColorLoaderDefault: VMColorLoader {
+open class VMColorLoaderDefault: VMColorLoader {
 
-    public func loadColor(named: String) -> UIColor {
-        UIColor(
-            named: "\(named)_color",
-            in: Bundle(for: VandMarvelUIKit.self),
-            compatibleWith: nil
-        ) ?? .clear
+    public func loadColor(named: String) -> UIColor? {
+        UIColor(named: "\(named)_color", in: Bundle(for: VandMarvelUIKit.self), compatibleWith: nil)
     }
 
 }
