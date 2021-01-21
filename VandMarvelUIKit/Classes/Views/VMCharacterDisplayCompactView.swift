@@ -62,10 +62,17 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
 
     private let favoriteButton = VMFavoriteButton()
 
+    // MARK: View funcs
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutSkeletonIfNeeded()
+    }
+
     // MARK: VMViewCode
 
     public func buildHierarchy() {
         addArrangedSubview(thumbnailChracterImageView)
+        addSpace()
         addArrangedSubview(nameLabel)
 
         addSubview(favoriteButton)
@@ -85,7 +92,12 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
 
     public func configViews() {
         axis = .vertical
-        spacing = 4
+
+        layer.borderWidth = 1
+        layer.borderColor = VMColor.neutralLight.color?.cgColor
+        layer.cornerRadius = 8
+        layer.masksToBounds = true
+
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTouchUpInside), for: .touchUpInside)
     }
 

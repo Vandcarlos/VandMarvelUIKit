@@ -29,9 +29,22 @@ class MainView: UIView, VMViewCode {
     weak var delegate: MainViewDelegate?
 
     var options: [Option] = [
-        .init(title: "Favorite button", viewController: { FavoriteButtonViewController() }),
-        .init(title: "Character image view", viewController: { CharacterImageViewController() }),
-        .init(title: "Character display compact", viewController: { CharacterDisplayCompactViewController() })
+        .init(
+            title: "Favorite button",
+            viewController: { FavoriteButtonViewController() }
+        ),
+        .init(
+            title: "Character image view",
+            viewController: { CharacterImageViewController() }
+        ),
+        .init(
+            title: "Character display compact",
+            viewController: { CharacterDisplayCompactViewController() }
+        ),
+        .init(
+            title: "Character display collection cell",
+            viewController: { CharacterDisplayCollectionCellViewController() }
+        )
     ]
 
     private lazy var tableView: UITableView = {
