@@ -44,6 +44,10 @@ class MainView: UIView, VMViewCode {
         .init(
             title: "Character display collection cell",
             viewController: { CharacterDisplayCollectionCellViewController() }
+        ),
+        .init(
+            title: "Character display inline",
+            viewController: { CharacterDisplayInlineViewController() }
         )
     ]
 
