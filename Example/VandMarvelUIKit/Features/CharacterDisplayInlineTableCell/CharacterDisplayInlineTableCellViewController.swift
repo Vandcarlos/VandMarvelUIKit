@@ -1,6 +1,6 @@
 // Created on 21/01/21. Copyright © 2021 Vand. All rights reserved.
 
-import UIKit
+import VandMarvelUIKit
 
 class CharacterDisplayInlineTableCellViewController: UIViewController {
 
