@@ -14,7 +14,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		A0158C2825B8C21A00641FC1 /* FavoriteButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0158C2725B8C21A00641FC1 /* FavoriteButtonViewController.swift */; };
 		A031275C25B8F4D90080CAAA /* FavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031275B25B8F4D90080CAAA /* FavoriteButtonView.swift */; };
-		A031279125B8F6B40080CAAA /* FavoriteButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031279025B8F6B40080CAAA /* FavoriteButtonTests.swift */; };
+		A031279125B8F6B40080CAAA /* VMFavoriteButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031279025B8F6B40080CAAA /* VMFavoriteButtonTests.swift */; };
+		A03127B825B902170080CAAA /* CharacterImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03127B025B901E30080CAAA /* CharacterImageViewController.swift */; };
+		A03127C525B903000080CAAA /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03127BF25B902520080CAAA /* CharacterImageView.swift */; };
 		A0BDAA8725B7B66300A711AB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDAA8625B7B66300A711AB /* MainView.swift */; };
 		FE3070A7E7377FA84FD09936 /* Pods_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2743EAEB1132B35ECA25AF6 /* Pods_UITests.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +51,9 @@
 		A031275B25B8F4D90080CAAA /* FavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonView.swift; sourceTree = "<group>"; };
 		A031277D25B8F6580080CAAA /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A031278125B8F6580080CAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A031279025B8F6B40080CAAA /* FavoriteButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonTests.swift; sourceTree = "<group>"; };
+		A031279025B8F6B40080CAAA /* VMFavoriteButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMFavoriteButtonTests.swift; sourceTree = "<group>"; };
+		A03127B025B901E30080CAAA /* CharacterImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageViewController.swift; sourceTree = "<group>"; };
+		A03127BF25B902520080CAAA /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
 		A0BDAA8625B7B66300A711AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C34C11CC04D0ECED676E6C57 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D2743EAEB1132B35ECA25AF6 /* Pods_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,7 @@
 		A0158C2525B8C20300641FC1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A03127AF25B901D10080CAAA /* CharacterImage */,
 				A0158C2625B8C20B00641FC1 /* FavoriteButton */,
 				A0BDAA8325B7B63F00A711AB /* Main */,
 			);
@@ -139,9 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				A031278125B8F6580080CAAA /* Info.plist */,
-				A031279025B8F6B40080CAAA /* FavoriteButtonTests.swift */,
+				A031279025B8F6B40080CAAA /* VMFavoriteButtonTests.swift */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		A03127AF25B901D10080CAAA /* CharacterImage */ = {
+			isa = PBXGroup;
+			children = (
+				A03127B025B901E30080CAAA /* CharacterImageViewController.swift */,
+				A03127BF25B902520080CAAA /* CharacterImageView.swift */,
+			);
+			path = CharacterImage;
 			sourceTree = "<group>";
 		};
 		A0BDAA7E25B7B62A00A711AB /* Supporting Files */ = {
@@ -401,10 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0158C2825B8C21A00641FC1 /* FavoriteButtonViewController.swift in Sources */,
+				A03127B825B902170080CAAA /* CharacterImageViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				A0BDAA8725B7B66300A711AB /* MainView.swift in Sources */,
 				A031275C25B8F4D90080CAAA /* FavoriteButtonView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A03127C525B903000080CAAA /* CharacterImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A031279125B8F6B40080CAAA /* FavoriteButtonTests.swift in Sources */,
+				A031279125B8F6B40080CAAA /* VMFavoriteButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

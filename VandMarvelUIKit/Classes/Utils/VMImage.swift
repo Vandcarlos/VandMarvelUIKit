@@ -4,6 +4,7 @@ import UIKit
 
 public enum VMImage: String {
 
+    case characterThumbnail = "character_thumbnail"
     case heart
 
     public var image: UIImage? {

@@ -2,7 +2,7 @@
 
 import XCTest
 
-class UITests: XCTestCase {
+class VMFavoriteButtonTests: XCTestCase {
 
     var app: XCUIApplication!
 
