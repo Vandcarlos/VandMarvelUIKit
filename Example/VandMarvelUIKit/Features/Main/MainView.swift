@@ -100,7 +100,10 @@ extension MainView {
 
         var title: String? {
             get { titleLabel.text }
-            set { titleLabel.text = newValue }
+            set {
+                titleLabel.text = newValue
+                titleLabel.accessibilityLabel = newValue
+            }
         }
 
         private let titleLabel = UILabel()

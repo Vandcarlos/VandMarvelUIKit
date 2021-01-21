@@ -21,7 +21,11 @@ class FavoriteButtonView: UIView, VMViewCode {
         return stackView
     }()
 
-    private let firstFavoriteButton = VMFavoriteButton()
+    private let firstFavoriteButton: VMFavoriteButton = {
+        let button = VMFavoriteButton()
+        button.accessibilityLabel = "Favorite button 1"
+        return button
+    }()
     private let secondFavoriteButton = VMFavoriteButton()
 
     func buildHierarchy() {
