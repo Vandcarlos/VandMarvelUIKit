@@ -6,7 +6,7 @@ import SkeletonView
 
 public extension UIView {
 
-    var isLoading: Bool {
+    @objc var isLoading: Bool {
         get {
             isSkeletonActive
         }

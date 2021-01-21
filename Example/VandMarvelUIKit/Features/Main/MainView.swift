@@ -30,7 +30,8 @@ class MainView: UIView, VMViewCode {
 
     var options: [Option] = [
         .init(title: "Favorite button", viewController: { FavoriteButtonViewController() }),
-        .init(title: "Character image view", viewController: { CharacterImageViewController() })
+        .init(title: "Character image view", viewController: { CharacterImageViewController() }),
+        .init(title: "Character display compact", viewController: { CharacterDisplayCompactViewController() })
     ]
 
     private lazy var tableView: UITableView = {
