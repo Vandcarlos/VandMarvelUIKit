@@ -13,24 +13,53 @@ class CharacterImageView: UIView, VMViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private let contentStackView: UIStackView = {
+        let stackVew = UIStackView()
+        stackVew.axis = .vertical
+        stackVew.alignment = .center
+        stackVew.spacing = 20
+        return stackVew
+    }()
+
     private let characterImage = VMCharacterImageView()
+    private let characterImageLoading = VMCharacterImageView()
+    private let characterImageNoImage = VMCharacterImageView()
 
     func buildHierarchy() {
-        addSubview(characterImage)
+        contentStackView.addArrangedSubview(characterImage)
+        contentStackView.addArrangedSubview(characterImageLoading)
+        contentStackView.addArrangedSubview(characterImageNoImage)
+        contentStackView.addSpace()
+
+        addSubview(contentStackView)
     }
 
     func setupConstraints() {
+        contentStackView.snp.makeConstraints { maker in
+            maker.edges.equalTo(self.safeAreaLayoutGuide)
+        }
+
         characterImage.snp.makeConstraints { maker in
-            maker.top.equalTo(self.safeAreaLayoutGuide)
-            maker.centerX.equalTo(self.safeAreaLayoutGuide)
-            maker.height.equalTo(200)
-            maker.width.equalTo(200)
+            maker.height.equalTo(100)
+            maker.width.equalTo(100)
+        }
+
+        characterImageLoading.snp.makeConstraints { maker in
+            maker.height.equalTo(100)
+            maker.width.equalTo(100)
+        }
+
+        characterImageNoImage.snp.makeConstraints { maker in
+            maker.height.equalTo(100)
+            maker.width.equalTo(100)
         }
     }
 
     func configViews() {
         backgroundColor = .white
         characterImage.image = UIImage(named: "iron_man")
+        characterImageLoading.isLoading = true
+        characterImageNoImage.image = nil
     }
 
 }

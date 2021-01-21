@@ -39,4 +39,5 @@ Pod::Spec.new do |s|
   end
 
    s.dependency 'SnapKit', '~> 5.0.0'
+   s.dependency 'SkeletonView'
 end

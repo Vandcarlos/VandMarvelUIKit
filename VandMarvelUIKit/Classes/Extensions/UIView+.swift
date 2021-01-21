@@ -2,8 +2,19 @@
 
 import UIKit
 import SnapKit
+import SkeletonView
 
 public extension UIView {
+
+    var isLoading: Bool {
+        get {
+            isSkeletonActive
+        }
+        set {
+            isSkeletonable = newValue
+            newValue ? showAnimatedGradientSkeleton() : hideSkeleton()
+        }
+    }
 
     class func spaceView(
         height: Double? = nil,
