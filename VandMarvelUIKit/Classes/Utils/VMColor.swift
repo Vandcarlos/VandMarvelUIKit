@@ -26,7 +26,7 @@ public enum VMColor: String {
 
     case background
 
-    var color: UIColor? { VandMarvelUIKit.shared.colorLoader.loadColor(named: rawValue) }
+    public var color: UIColor? { VandMarvelUIKit.shared.colorLoader.loadColor(named: rawValue) }
 
 }
 
