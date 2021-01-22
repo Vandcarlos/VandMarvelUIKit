@@ -19,6 +19,16 @@ open class VMBaseViewController: UIViewController {
     private func setupNavigation() {
         navigationController?.navigationBar.barTintColor = VMColor.primary.color
         navigationController?.navigationBar.tintColor = VMColor.secondary.color
+
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: VMColor.secondary.color as Any]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: VMColor.secondary.color as Any]
+            navBarAppearance.backgroundColor = VMColor.primary.color
+
+            navigationItem.standardAppearance = navBarAppearance
+            navigationItem.scrollEdgeAppearance = navBarAppearance
+        }
     }
 
     private func setupTabBar() {
