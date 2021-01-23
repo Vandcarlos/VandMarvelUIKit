@@ -4,9 +4,14 @@ import UIKit
 
 open class VMSearchViewController: VMBaseViewController {
 
-    public let searchController = UISearchController(searchResultsController: nil)
+    public let searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        return searchController
+    }()
 
     open override func viewDidLoad() {
+        searchController.obscuresBackgroundDuringPresentation = false
         super.viewDidLoad()
         navigationItem.searchController = searchController
     }
