@@ -36,6 +36,14 @@ class CharacterDisplayCompactView: UIView, VMViewCode {
         contentStackView.snp.makeConstraints { maker in
             maker.edges.equalTo(self.safeAreaLayoutGuide)
         }
+
+        characterDisplay.snp.makeConstraints { maker in
+            maker.height.equalTo(150)
+        }
+
+        characterDisplayLoading.snp.makeConstraints { maker in
+            maker.height.equalTo(150)
+        }
     }
 
     func configViews() {

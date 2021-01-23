@@ -20,8 +20,8 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
         get { itemsIsLoading }
         set {
             itemsIsLoading = newValue
-            nameLabel.isLoading = newValue
             thumbnailChracterImageView.isLoading = newValue
+            nameLabel.isLoading = newValue
             favoriteButton.isHidden = newValue
         }
     }
@@ -43,7 +43,6 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
         set { favoriteButton.isSelected = newValue }
     }
 
-    private let thumbnailSize = CGSize(width: 150, height: 200)
     private let favoriteButtonOffset = 10.0
 
     private var itemsIsLoading: Bool = false
@@ -79,11 +78,6 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
     }
 
     public func setupConstraints() {
-        thumbnailChracterImageView.snp.makeConstraints { maker in
-            maker.height.equalTo(thumbnailSize.height)
-            maker.width.equalTo(thumbnailSize.width)
-        }
-
         favoriteButton.snp.makeConstraints { maker in
             maker.top.equalTo(self.safeAreaInsets).offset(favoriteButtonOffset)
             maker.trailing.equalTo(self.safeAreaInsets).offset(-favoriteButtonOffset)
@@ -92,6 +86,8 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
 
     public func configViews() {
         axis = .vertical
+
+        distribution = .fill
 
         layer.borderWidth = 1
         layer.borderColor = VMColor.neutralLight.color?.cgColor
