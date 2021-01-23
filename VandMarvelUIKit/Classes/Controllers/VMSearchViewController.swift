@@ -11,7 +11,6 @@ open class VMSearchViewController: VMBaseViewController {
     }()
 
     open override func viewDidLoad() {
-        searchController.obscuresBackgroundDuringPresentation = false
         super.viewDidLoad()
         navigationItem.searchController = searchController
     }
