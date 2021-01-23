@@ -78,9 +78,13 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
     }
 
     public func setupConstraints() {
+        thumbnailChracterImageView.snp.makeConstraints { maker in
+            maker.height.equalTo(safeAreaLayoutGuide).multipliedBy(0.8)
+        }
+
         favoriteButton.snp.makeConstraints { maker in
-            maker.top.equalTo(self.safeAreaInsets).offset(favoriteButtonOffset)
-            maker.trailing.equalTo(self.safeAreaInsets).offset(-favoriteButtonOffset)
+            maker.top.equalTo(safeAreaLayoutGuide).offset(favoriteButtonOffset)
+            maker.trailing.equalTo(safeAreaLayoutGuide).offset(-favoriteButtonOffset)
         }
     }
 
