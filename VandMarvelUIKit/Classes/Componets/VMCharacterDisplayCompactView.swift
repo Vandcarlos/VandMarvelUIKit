@@ -59,8 +59,10 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
 
     public func buildHierarchy() {
         addArrangedSubview(thumbnailChracterImageView)
-        addSpace()
+
         addArrangedSubview(nameLabel)
+
+        addSpace()
 
         addSubview(favoriteButton)
     }
@@ -80,6 +82,8 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
         axis = .vertical
 
         distribution = .fill
+        alignment = .center
+        spacing = 4
 
         layer.borderWidth = 1
         layer.borderColor = VMColor.neutralLight.color?.cgColor
