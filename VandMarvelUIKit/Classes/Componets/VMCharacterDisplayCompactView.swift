@@ -16,16 +16,6 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public override var isLoading: Bool {
-        get { itemsIsLoading }
-        set {
-            itemsIsLoading = newValue
-            thumbnailChracterImageView.isLoading = newValue
-            nameLabel.isLoading = newValue
-            favoriteButton.isHidden = newValue
-        }
-    }
-
     public var favoriteHandler: FavoriteHandler?
 
     public var thumbnail: UIImage? {
@@ -44,8 +34,6 @@ public class VMCharacterDisplayCompactView: UIStackView, VMViewCode {
     }
 
     private let favoriteButtonOffset = 10.0
-
-    private var itemsIsLoading: Bool = false
 
     // MARK: Subviews
 
