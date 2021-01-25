@@ -1,13 +1,14 @@
-// Created on 21/01/21. 
+// Created on 25/01/21. 
 
-import UIKit
+import Foundation
 
-open class VMBaseViewController: UIViewController {
+open class VMBaseNavigationController: UINavigationController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = VMColor.background.color
+        navigationBar.barTintColor = VMColor.primary.color
+        navigationBar.tintColor = VMColor.secondary.color
 
         if #available(iOS 13.0, *) {
             let navBarAppearance = VMNavigationBarApperance()
@@ -17,5 +18,3 @@ open class VMBaseViewController: UIViewController {
     }
 
 }
-
-

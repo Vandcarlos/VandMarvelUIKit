@@ -1,13 +1,14 @@
-// Created on 21/01/21. 
+// Created on 25/01/21. 
 
 import UIKit
 
-open class VMBaseViewController: UIViewController {
+open class VMBaseTabBarController: UITabBarController {
 
     open override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = VMColor.background.color
+        tabBar.barTintColor = VMColor.primary.color
+        tabBar.tintColor = VMColor.secondary.color
 
         if #available(iOS 13.0, *) {
             let navBarAppearance = VMNavigationBarApperance()
@@ -17,5 +18,3 @@ open class VMBaseViewController: UIViewController {
     }
 
 }
-
-
