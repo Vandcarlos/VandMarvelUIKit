@@ -10,6 +10,10 @@ public class VMNavigationBarApperance: UINavigationBarAppearance {
         setup()
     }
 
+    public override init(barAppearance: UIBarAppearance) {
+        super.init(barAppearance: barAppearance)
+    }
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
