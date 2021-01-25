@@ -17,5 +17,3 @@ open class VMBaseViewController: UIViewController {
     }
 
 }
-
-

@@ -6,7 +6,6 @@ public enum VMImage: String {
 
     case characterThumbnail = "character_thumbnail"
     case heart
-    case heart2 = "heart_2"
     case list
 
     public var image: UIImage? {
