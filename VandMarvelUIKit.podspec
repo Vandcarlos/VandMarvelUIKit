@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VandMarvelUIKit'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'All costumized ui components'
 
 # This description is used to generate tags and improve search results.
