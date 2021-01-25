@@ -13,6 +13,7 @@ open class VMSearchViewController: VMBaseViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.searchController = searchController
+        tabBarController?.navigationItem.searchController = searchController
         definesPresentationContext = true
     }
 
