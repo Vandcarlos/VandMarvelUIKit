@@ -9,6 +9,7 @@ open class VMBaseNavigationController: UINavigationController {
 
         navigationBar.barTintColor = VMColor.primary.color
         navigationBar.tintColor = VMColor.secondary.color
+        navigationBar.titleTextAttributes = [.foregroundColor: VMColor.secondary.color as Any]
 
         if #available(iOS 13.0, *) {
             let navBarAppearance = VMNavigationBarApperance()
